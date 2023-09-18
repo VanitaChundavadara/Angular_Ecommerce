@@ -1,0 +1,11 @@
+<div class="custom-header-design ">
+    <div class="practice-menu">
+        <a href="" class="header-menu">Home</a>
+        <a href="" class="header-menu">Products</a>
+        <a href="" class="header-menu">About</a>
+        <a href="" class="header-menu">Contact</a>
+    </div>
+    <div [ngStyle]="{width:'60%'}">
+        <app-search (serchTextChange)="onSerch($event)"></app-search>
+    </div>
+</div>

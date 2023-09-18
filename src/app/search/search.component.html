@@ -1,0 +1,13 @@
+<div class="input-search">
+    <!-- For without button Click
+    <input class="custom-input-search" [(ngModel)]="searchText" (input)="onSearchTextChanged()">
+    <button class="btn-search" [disabled]="!searchText">Search</button> -->
+
+    <input class="custom-input-search" [(ngModel)]="searchText" #serchInput (input)="onSearchTextChanged()">
+    <button class="btn-search" (click)="updateSearchText(serchInput)">Search</button>
+</div>
+<div>
+    <p class="search-label-text" *ngIf="searchText">
+        <strong> Search result for: </strong>{{searchText}}
+    </p>
+</div>

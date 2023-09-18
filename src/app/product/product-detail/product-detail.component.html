@@ -1,0 +1,35 @@
+<div><p-dialog header="Header" [(visible)]="visible" [style]="{width: '32vw'}" (onHide)="onCardClick()">
+        <!-- <div *ngFor="let prod of productlist"> -->
+        <!-- <div *ngIf="selectProduct===prod"> -->
+        <img [style]="{width:'360px',height:'360px'}" [src]="product.image" />
+        <h3 [style]="{marginBottom:'0px',fontWeight:300}">{{product?.category}}</h3>
+        <h4 [style]="{fontWeight:500,fontSize:'18px'}" class="margin-top-10">{{product.title}}</h4>
+        <div class="display-flex-row">
+            <h3 class="margin-top-10">${{product.price}}</h3>
+            <h3 class="margin-top-10 padding-left-10"
+                [ngClass]="{fontWeight:'bold',color:product.stock<1?'red':product.stock==1?'orange':'text-green-bold'}">
+                {{product.stock<1 ? "Not available in Stock" : product.stock==1 ? "Only 1 left in stock"
+                    : "Available in Stock" }}</h3>
+        </div>
+        <h4 class="margin-top-10">Available Size</h4>
+        <p-divider class="margin-top-10"></p-divider>
+        <div class="card flex align-items-center gap-2 flex-wrap">
+            <p-chip label="6"></p-chip>
+            <p-chip label="7"></p-chip>
+            <p-chip label="8"></p-chip>
+            <p-chip label="9"></p-chip>
+        </div>
+        <h4 class="margin-top-10">Available Color</h4>
+        <p-divider class="margin-top-10"></p-divider>
+        <div class="card flex align-items-center gap-2 flex-wrap">
+            <p-chip styleClass="red-color" label="1"></p-chip>
+            <p-chip styleClass="blue-color" label="2"></p-chip>
+            <p-chip styleClass="black-color" label="3"></p-chip>
+            <p-chip styleClass="grey-color" label="4"></p-chip>
+        </div>
+        <h5 class="margin-top-10">Description : {{product.title}}
+        </h5>
+        <!-- </div> -->
+        <!-- </div> -->
+    </p-dialog>
+</div>

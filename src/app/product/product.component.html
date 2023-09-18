@@ -1,0 +1,15 @@
+<div>
+    <p-toast></p-toast>
+    <div class="main-div">
+        <app-filter [all]="totalProductCount" [inStock]="totalProductCountInStock"
+            [outofStock]="totalProductCountOutofStock" (selectbuttonchange)="onFilterChange($event)"></app-filter>
+    </div>
+    <div class="custom-card-design">
+        <div *ngFor="let prod of product" (click)="selectedProduct=prod">
+            <!-- For Filter
+            *ngIf="selectedbutton==='all'|| (prod.stock>0).toString()===selectedbutton" -->
+            <app-product-list [product]="prod" (ClickProductChange)="setSelectedProd(event)" (ClickCardChanged)="onClickCard($event)"
+                *ngIf="inputSerchText===''||prod.category.toLowerCase().includes(inputSerchText) || prod.title.toLowerCase().includes(inputSerchText)"></app-product-list>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.custom-header-design {
+  background-color: rgb(88, 153, 250);
+  display: flex;
+  flex-direction: row;
+}
+.practice-menu {
+  padding: 20px 0px 20px 0px;
+  font-weight: 500;
+  font-size: 16px;
+  width: 40%;
+  text-align: center;
+}
+.header-menu {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}

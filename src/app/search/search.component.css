@@ -1,0 +1,24 @@
+.input-search {
+  margin: 12px auto;
+}
+.custom-input-search {
+  width: 60%;
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  background-color: #ffffff;
+}
+.btn-search {
+  /* padding: 10px; */
+  height: 42px;
+  background-color: grey;
+  color: white;
+  border:none;
+  margin-left: -15px;
+}
+.search-label-text{
+    font-size: 16px;
+    color: #ffffff !important;
+}

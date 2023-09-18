@@ -1,0 +1,16 @@
+<div class="custom-card-design">
+    <div class="card-design" (click)="onCardClick()">
+        <img class="img-design" [src]="product.image" />
+        <div class="secondary-text padding-bottom-10px">{{ product.category }}</div>
+        <div class="padding-bottom-10px text-center padding-left-right-20px">
+            {{ product.title }}
+        </div>
+        <div class="primary-text padding-bottom-10px">${{ product.price }}</div>
+        <div class="text-center"
+            [ngStyle]="{fontWeight:'bold',color:product.stock<1?'red':product.stock==1?'orange':'green'}">
+            {{product.stock<1 ? "Not available in Stock" : product.stock==1 ? "Only 1 left in stock"
+                : "Available in Stock" }} </div>
+                <button type="button" [disabled]='product.stock<1' pButton pRipple (click)="addtocart(product.id)"
+                    class="p-button-success btn-design">Add to cart</button>
+        </div>
+    </div>
